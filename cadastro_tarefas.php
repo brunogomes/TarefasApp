@@ -11,7 +11,16 @@
 <?php
   $data = $_POST['data'];
   $descricao = $_POST['descricao'];
-  
+  $user_id = 1;
+
+  $dbc = mysqli_connect('localhost', 'root', '', 'tarefasapp') or die('Erro conexao BD');
+
+  $query = "INSERT INTO tarefas (descricao, data, users_id) VALUES ('$descricao', '$data', '$user_id')";
+
+  $result = mysqli_query($dbc, $query) or die('Erro consulta BD');
+
+  mysqli_close($dbc);
+
   echo "Cadastro realizado com sucesso!";
   
 ?>
