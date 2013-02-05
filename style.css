@@ -1,0 +1,10 @@
+tr {
+  padding:0 ;
+  border: 0 ;
+}
+
+td{
+  border-bottom: solid;
+  padding: 10px;
+  border-width: 1px;
+}
